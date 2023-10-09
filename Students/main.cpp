@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	SetConsoleOutputCP(1251);
+	SetConsoleOutputCP(1251); // connect cirilic alfabet
 
 	/*Student obj1;
 	std::cout << sizeof(obj1) << endl;*/

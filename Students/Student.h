@@ -22,3 +22,11 @@ struct ArrayStudents
 
 	int Count = 0;/////кількість студентів
 };
+
+void InputData(Student* st);
+void AddStudents(ArrayStudents& a, Student* st);
+void RemoveStudent(ArrayStudents& a, int index);/////////////////DZ!!!!!!!!!!!!!!!!!
+void EditStudent(ArrayStudents& a, int index);
+void PrintStudents(const ArrayStudents& a);
+void Destroy(ArrayStudents& a);
+int FindStudentIndex(const ArrayStudents& a, Student* st);

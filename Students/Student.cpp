@@ -1,20 +1,20 @@
 #include "Student.h"
 
-void InputData(Student* st)////вже є студент в пам'яті
+void InputData(Student* st)////ГўГ¦ГҐ Вє Г±ГІГіГ¤ГҐГ­ГІ Гў ГЇГ Г¬'ГїГІВі // cirilic alfabet
 {
-	cout << "Введите имя студента: ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ¬Гї Г±ГІГіГ¤ГҐГ­ГІГ : ";
 	cin >> st->Name;
-	cout << "Введите фамилию студента: ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГґГ Г¬ГЁГ«ГЁГѕ Г±ГІГіГ¤ГҐГ­ГІГ : ";
 	cin >> st->Surname;
-	cout << "Введите возраст студента: ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГўГ®Г§Г°Г Г±ГІ Г±ГІГіГ¤ГҐГ­ГІГ : ";
 	cin >> st->Age;
-	cout << "Введите телефон студента: ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГІГҐГ«ГҐГґГ®Г­ Г±ГІГіГ¤ГҐГ­ГІГ : ";
 	cin >> st->Phone;
-	cout << "Введите средний балл студента: ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г±Г°ГҐГ¤Г­ГЁГ© ГЎГ Г«Г« Г±ГІГіГ¤ГҐГ­ГІГ : ";
 	cin >> st->GPA;
 }
 
-void AddStudents(ArrayStudents& a, Student* st)
+void AddStudents(ArrayStudents& a, Student* st) // 
 {
 	int new_num = a.Count + 1;
 
@@ -59,7 +59,7 @@ void PrintStudents(const ArrayStudents& a)
 	}
 }
 
-void Destroy(ArrayStudents& a)
+void Destroy(ArrayStudents& a)  // delete array of students
 {
 	for (int i = 0; i < a.Count; i++)
 		delete a.list[i];
@@ -71,7 +71,7 @@ int FindStudentIndex(const ArrayStudents& a, Student* st)
 	int index = -1;
 	for (int i = 0; i < a.Count; i++)
 	{
-		if (strcmp(a.list[i]->Surname, st->Surname) == 0 && strcmp(a.list[i]->Name, a.list[i]->Name) == 0)
+		if (strcmp(a.list[i]->Surname, st->Surname) == 0 && strcmp(a.list[i]->Name, a.list[i]->Name) == 0) // name & surame must be correct in other case search will not work
 		{
 			index = i;
 			break;

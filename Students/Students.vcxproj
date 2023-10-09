@@ -83,6 +83,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menu.h" />
+    <ClCompile Include="Student.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

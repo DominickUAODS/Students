@@ -65,3 +65,17 @@ void Destroy(ArrayStudents& a)
 		delete a.list[i];
 	delete[] a.list;
 }
+
+int FindStudentIndex(const ArrayStudents& a, Student* st)
+{
+	int index = -1;
+	for (int i = 0; i < a.Count; i++)
+	{
+		if (strcmp(a.list[i]->Surname, st->Surname) == 0 && strcmp(a.list[i]->Name, a.list[i]->Name) == 0)
+		{
+			index = i;
+			break;
+		}
+	}
+	return index;
+}

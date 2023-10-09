@@ -58,3 +58,10 @@ void PrintStudents(const ArrayStudents& a)
 			<< endl;
 	}
 }
+
+void Destroy(ArrayStudents& a)
+{
+	for (int i = 0; i < a.Count; i++)
+		delete a.list[i];
+	delete[] a.list;
+}

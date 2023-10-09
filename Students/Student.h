@@ -15,3 +15,10 @@ struct Student
 	char Phone[20];////////////////20
 	double GPA; // grade point average   8
 };
+
+struct ArrayStudents
+{
+	Student** list = nullptr;///list[i]
+
+	int Count = 0;/////кількість студентів
+};

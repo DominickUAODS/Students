@@ -40,3 +40,21 @@ void RemoveStudent(ArrayStudents& a, int index)
 	delete[] a.list;
 	a.list = temp;
 }
+
+void EditStudent(ArrayStudents& a, int index)
+{
+	InputData(a.list[index]);
+}
+
+void PrintStudents(const ArrayStudents& a)
+{
+	for (int i = 0; i < a.Count; i++)
+	{
+		cout << setw(15) << a.list[i]->Name
+			<< setw(15) << a.list[i]->Surname
+			<< setw(10) << a.list[i]->Age
+			<< setw(20) << a.list[i]->Phone
+			<< setw(15) << a.list[i]->GPA
+			<< endl;
+	}
+}

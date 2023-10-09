@@ -26,3 +26,17 @@ void AddStudents(ArrayStudents& a, Student* st)
 	a.list = temp;
 	a.list[a.Count++] = st;
 }
+
+void RemoveStudent(ArrayStudents& a, int index)
+{
+	a.Count--;
+	Student** temp = new Student * [a.Count];
+	for (int i = 0; i < a.Count; i++)
+		if (i >= index)
+			temp[i] = a.list[i + 1];
+		else
+			temp[i] = a.list[i];
+
+	delete[] a.list;
+	a.list = temp;
+}
